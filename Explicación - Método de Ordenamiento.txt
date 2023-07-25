@@ -1,0 +1,34 @@
+# MÉTODO DE ORDENAMIENTO UTILIZADO - EXPLICACIÓN:
+
+La función fue llamada 'ordenar_seleccion'. Esta recibe dos parámetros: 'vector' y 'ascendente' 
+(con un valor predeterminado de 'True'). Esta función se utiliza para ordenar un vector de elementos.
+
+De forma resumida se pueden considerar los siguientes pasos:
+
+1. Primero, se obtuvo la longitud del vector y se guardó en la variable 'n' usando la función 'len(vector)'.
+
+2. Se inició un bucle 'for' que iteró desde 0 hasta n-1. Esto se hizo para recorrer el vector y 
+realizar las comparaciones necesarias para ordenarlo correctamente.
+
+3. Dentro del bucle 'for', se inicializó la variable 'indice' con el valor actual de i. 
+Esta variable serviría para guardar el índice del elemento mínimo o máximo encontrado durante el recorrido del vector.
+
+4. Se utilizó otro bucle 'for' que iteró desde i+1 hasta n. 
+Este bucle se utilizó para comparar los elementos restantes del vector con el elemento en la posición actual 
+('vector[i]') y encontrar el mínimo o máximo según el caso.
+
+5. Dentro del bucle interior, hay una estructura 'if' que verifica si la variable 'ascendente' es 'True' 
+y si el elemento en la posición j del vector es menor que el elemento en la posición 'indice'. 
+Si ambas condiciones se cumplían, entonces se actualizaba el 'indice' con el valor de 'j'.
+
+6. En caso de que la variable 'ascendente' fuera 'False' (es decir, orden descendente), 
+se utilizó una estructura elif para verificar si el elemento en la posición j del vector era mayor 
+que el elemento en la posición 'indice'. Si ambas condiciones se cumplían, se actualizaba 'indice' con el valor de 'j'.
+
+7. Después de recorrer todos los elementos restantes del vector dentro del bucle interior, 
+se realizó un intercambio entre los elementos 'vector[i]' y 'vector[indice]'. 
+Esto hizo que se posicionara el elemento mínimo o máximo encontrado en la posición correcta.
+
+8. Finalmente, cuando el bucle exterior 'for' terminó de iterar sobre todos los elementos del vector, 
+la función 'ordenar_seleccion' organizó el vector según el orden especificado por la variable 'ascendente' 
+(ya sea ascendente o descendente).
